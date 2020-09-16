@@ -84,12 +84,14 @@ $(window).scroll(
       $(".navbar").removeClass("navbar-top");
       $(".navbar").addClass("navbar-light");
       $(".navbar").addClass("bg-light");
-      $(".brand").css("color","black")
+      $(".brand").css("color","black");
+      $(".buycart").css("display","flex");
     }else{
       $(".navbar").addClass("navbar-top");
       $(".navbar").removeClass("navbar-light");
       $(".navbar").removeClass("bg-light");
-      $(".brand").css("color","transparent")
+      $(".brand").css("color","transparent");
+      $(".buycart").css("display","none");
     }
   }
 );

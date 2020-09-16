@@ -14,7 +14,8 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="app">
-  <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand brand" href="header">LohasLife</a>
+  <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand brand" href="header">LohasDay</a>
+    <div class="buycart" @click="isCartOpen=!isCartOpen"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div>
     <button class="navbar-toggler bread" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
@@ -27,10 +28,10 @@
   </nav>
   <header class="jumbotron" :class="{isCartOpen: isCartOpen}">
     <div class="container">
-      <h1 data-0="transform: translateY(-50px);opacity: 1" data-300="transform:  translateY(100px);opacity: 0">欣森活LohasLife</h1>
+      <h1 data-0="transform: translateY(-50px);opacity: 1" data-300="transform:  translateY(100px);opacity: 0">綠日子 LohasDay</h1>
       <hr/>
-      <p>環保，綠的代名詞。跟我們一起愛護地球，展開欣生活</p>
-      <div class="explore">探索欣森活</div>
+      <p>環保，綠的代名詞。跟我們一起愛護地球，度過綠日子!</p>
+      <div class="explore">探索綠日子</div>
     </div>
   </header>
   <section id="section-nature" :class="{isCartOpen: isCartOpen}">
@@ -96,8 +97,7 @@
           <h5 data-bottom-center="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0px);opacity: 1">為了愛地球提倡環保，我們致力尋找環保素材。</h5>
           <h4 data-bottom-center="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0px);opacity: 1">終於，我們發現了-銅離子</h4>
         </div>
-        <div class="col-md-12"><img data-bottom-center="transform: scale(1);opacity:0" data-center="transform: scale(1.2);opacity:1" src="http://www.dazzeon.com/wp-content/uploads/2018/01/%E9%8A%85%E9%9B%A2%E5%AD%90-%E7%B4%B0%E8%8F%8C.png" alt=""/></div>
-        <div class="col-md-12">
+        <div class="col-md-12 content"><img data-bottom-center="transform: scale(1);opacity:0" data-center="transform: scale(1.2);opacity:1" src="http://www.dazzeon.com/wp-content/uploads/2018/01/%E9%8A%85%E9%9B%A2%E5%AD%90-%E7%B4%B0%E8%8F%8C.png" alt=""/>
           <h4 data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"> 什麼是銅離子?</h4>
           <hr data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"/>
           <p class="text-justify" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">  銅離子抗菌纖維是一種機能性纖維，具有阻斷疾病傳播、消除異味、修復皮膚等效果，是新型的抗菌紡織品。早在2008年，美國環境保護機構(NRDC)就登記核准了五種銅合金用於抗菌材料，這些銅合金可以在2小時內殺滅物體表面99%的細菌。</p>
@@ -175,8 +175,6 @@
           <div class="col-md-12">
             <hr/>
             <p class="text text-justify">{{bug.text}}</p>
-          </div>
-          <div class="col-md-12 meterial">
             <p class="text">材質: {{bug.meterial}}</p>
             <hr/>
           </div>
@@ -219,7 +217,7 @@
           <div class="mailbox">
             <div class="mailbody">
               <label>姓名:
-                <input class="userName" type="text"/>
+                <input class="userName" type="text" aria-required="true" aria-invalid="false" autocomplete="on"/>
               </label>
               <label>電話:
                 <input class="userPhone"/>
@@ -242,14 +240,12 @@
     <div class="container">
       <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item"><a class="btn-floating btn-fb mx-1"><i class="fab fa-facebook-f"> </i></a></li>
-        <li class="list-inline-item"><a class="btn-floating btn-tw mx-1"><i class="fab fa-twitter"> </i></a></li>
         <li class="list-inline-item"><a class="btn-floating btn-gplus mx-1"><i class="fab fa-google-plus-g"> </i></a></li>
         <li class="list-inline-item"><a class="btn-floating btn-li mx-1"><i class="fab fa-instagram"> </i></a></li>
       </ul>
-      <div class="footer-copyright text-center py-1">© 2020 Copyright:<a href="https://www.facebook.com/yuanji.co" target="_blank"> 欣森活國際股份有限公司</a></div>
+      <div class="footer-copyright text-center py-1">© 2020 Copyright:<a href="https://www.facebook.com/yuanji.co" target="_blank"> 綠日子國際股份有限公司</a></div>
     </div>
   </footer>
-  <div class="buycart" @click="isCartOpen=!isCartOpen" v-show="cart.length&gt;0"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div>
   <div class="buylist" v-if="isCartOpen">
     <div class="panel">
       <div class="close" @click="isCartOpen=!isCartOpen">x</div>
@@ -268,6 +264,7 @@
       </ul>
       <hr/>
       <h3>NT {{totalPrice}} $</h3>
+      <button class="buy">點此結帳</button>
     </div>
   </div>
 </div>
