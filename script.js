@@ -96,7 +96,6 @@ $(window).scroll(
   }
 );
 
-var s = skrollr.init();
 
 $(document).on('click','a',function(evt){
   evt.preventDefault();
