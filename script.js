@@ -97,7 +97,7 @@ $(window).scroll(
 );
 
 var s = skrollr.init({
-  mobileDeceleration:0.01
+  skrollrBody:'my-body' 
 });
 
 $(document).on('click','a',function(evt){
