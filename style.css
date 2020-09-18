@@ -709,7 +709,7 @@ section#section-contact .mailbox button:hover {
   animation: earthmove 0.8s infinite alternate;
 }
 .loadingPage.complete {
-  opacity: 0;
+  display: none;
   z-index: 0;
 }
 .loadingPage.complete .loadingEarth {
