@@ -2,9 +2,9 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - 綠日子LohasDay</title>
+  <title>綠日子LohasDay</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="LohasLife綠生活">
+<meta property="og:title" content="綠日子LohasDay">
 <meta property="og:description" content="提倡環保的綠色品牌" ><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&amp;display=swap"rel="stylesheet'>
@@ -17,27 +17,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
 <div id="app">
+  <div id="skrollr-body"></div>
+  <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand brand" href="header">LohasDay</a>
+    <div class="buycart" @click="isCartOpen=!isCartOpen"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div>
+    <button class="navbar-toggler bread" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="#section-nature">環境故事<span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#section-example">環境汙染</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section-copperion">關於銅離子</a></li>
+        <li class="nav-item"><a class="nav-link" href="section#product">商品專區</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="jumbotron" :class="{isCartOpen: isCartOpen}">
+    <div class="container">
+      <h1 data-0="transform: translateY(-50px);opacity: 1" data-300="transform:  translateY(100px);opacity: 0">綠日子 LohasDay</h1>
+      <hr/>
+      <p>環保，綠的代名詞。跟我們一起愛護地球，度過綠日子!</p>
+      <div class="explore">探索綠日子</div>
+    </div>
+  </header>
   <div id="skrollr-body">
-    <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand brand" href="header">LohasDay</a>
-      <div class="buycart" @click="isCartOpen=!isCartOpen"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div>
-      <button class="navbar-toggler bread" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active"><a class="nav-link" href="#section-nature">環境故事<span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-example">環境汙染</a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-copperion">關於銅離子</a></li>
-          <li class="nav-item"><a class="nav-link" href="section#product">商品專區</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header class="jumbotron" :class="{isCartOpen: isCartOpen}">
-      <div class="container">
-        <h1 data-0="transform: translateY(-50px);opacity: 1" data-300="transform:  translateY(100px);opacity: 0">綠日子 LohasDay</h1>
-        <hr/>
-        <p>環保，綠的代名詞。跟我們一起愛護地球，度過綠日子!</p>
-        <div class="explore">探索綠日子</div>
-      </div>
-    </header>
     <section id="section-nature" :class="{isCartOpen: isCartOpen}">
       <div class="fas fa-sun sun" data-bottom-center="opacity:0" data-center="opacity: 1"></div>
       <div class="cloudbox" data-bottom-center="opacity:0" data-center="opacity: 1">
@@ -211,45 +212,45 @@
         </div>
       </div>
     </section>
-    <section id="section-contact" :class="{isCartOpen: isCartOpen}">
-      <div class="container">
-        <div class="row" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(100px);opacity: 1">
-          <div class="col-md-12 contact">
-            <h3>聯絡我們</h3>
-            <h6>如果有任何產品疑問，或建議，請與我們聯絡，謝謝。</h6>
-            <hr/>
-            <div class="mailbox">
-              <div class="mailbody">
-                <label>姓名:
-                  <input class="userName" type="text" aria-required="true" aria-invalid="false" autocomplete="on"/>
-                </label>
-                <label>電話:
-                  <input class="userPhone"/>
-                </label>
-                <label>Mail:
-                  <input class="userMail"/>
-                </label>
-                <label>您的意見
-                  <textarea class="userText" rows="5"></textarea>
-                </label>
-                <button class="send">送出意見</button>
-              </div>
-              <div class="mailcover"></div>
+  </div>
+  <section id="section-contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 contact">
+          <h3>聯絡我們</h3>
+          <h6>如果有任何產品疑問，或建議，請與我們聯絡，謝謝。</h6>
+          <hr/>
+          <div class="mailbox">
+            <div class="mailbody">
+              <label>姓名:
+                <input class="userName" type="text" aria-required="true" aria-invalid="false" autocomplete="on"/>
+              </label>
+              <label>電話:
+                <input class="userPhone"/>
+              </label>
+              <label>Mail:
+                <input class="userMail"/>
+              </label>
+              <label>您的意見
+                <textarea class="userText" rows="5"></textarea>
+              </label>
+              <button class="send">送出意見</button>
             </div>
+            <div class="mailcover"></div>
           </div>
         </div>
       </div>
-    </section>
-    <footer class="page-footer font-small">
-      <div class="container">
-        <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item"><a class="btn-floating btn-fb mx-1"><i class="fab fa-facebook-f"> </i></a></li>
-          <li class="list-inline-item"><a class="btn-floating btn-gplus mx-1"><i class="fab fa-google-plus-g"> </i></a></li>
-          <li class="list-inline-item"><a class="btn-floating btn-li mx-1"><i class="fab fa-instagram"> </i></a></li>
-        </ul>
-        <div class="footer-copyright text-center py-1">© 2020 Copyright:<a href="https://www.facebook.com/yuanji.co" target="_blank"> 綠日子國際股份有限公司</a></div>
-      </div>
-    </footer>
+    </div>
+  </section>
+  <footer class="page-footer font-small">
+    <div class="container">
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item"><a class="btn-floating btn-fb mx-1"><i class="fab fa-facebook-f"> </i></a></li>
+        <li class="list-inline-item"><a class="btn-floating btn-gplus mx-1"><i class="fab fa-google-plus-g"> </i></a></li>
+        <li class="list-inline-item"><a class="btn-floating btn-li mx-1"><i class="fab fa-instagram"> </i></a></li>
+      </ul>
+      <div class="footer-copyright text-center py-1">© 2020 Copyright:<a href="https://www.facebook.com/yuanji.co" target="_blank"> 綠日子國際股份有限公司</a></div>
+    </div>
     <div class="buylist" v-if="isCartOpen">
       <div class="panel">
         <div class="close" @click="isCartOpen=!isCartOpen">x</div>
@@ -270,7 +271,7 @@
         <h3>NT {{totalPrice}} $</h3>
       </div>
     </div>
-  </div>
+  </footer>
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
