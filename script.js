@@ -1,3 +1,5 @@
+//skrollr ismobile destroy
+
 console.clear()
 var outer_data_bug=[ 
     {
@@ -97,6 +99,11 @@ $(window).scroll(
 );
 
 var s = skrollr.init();
+var isMobile = s.isMobile()
+if(isMobile){
+  s.destroy()
+}
+
 
 $(document).on('click','a',function(evt){
   evt.preventDefault();
