@@ -284,7 +284,7 @@ section#section-example {
   background-color: #004445;
   text-align: center;
   color: #faf5e4;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
 }
 section#section-example .top {
   margin-bottom: -100px;
@@ -296,11 +296,10 @@ section#section-example .content {
   background-color: #c58f00;
   padding: 20px;
   box-sizing: border-box;
-  border-radius: 10px;
   position: relative;
   right: 30px;
   top: 50px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 }
 section#section-example p {
   text-align: left;
@@ -317,12 +316,11 @@ section#section-example h5 {
   text-align: left;
 }
 section#section-example .img img {
-  width: 90vw;
+  width: 130%;
   position: relative;
   left: 20px;
-  border-radius: 50%;
   margin-bottom: 10px;
-  border-radius: 10px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 767px) {
@@ -404,9 +402,17 @@ section#section_copperion_title h2 {
 section#section_copperion_test {
   text-align: center;
   background-color: #f8b400;
+  padding-bottom: 100px;
 }
 section#section_copperion_test .content {
+  margin-top: 50px;
+}
+section#section_copperion_test .content .text {
   margin-top: 30px;
+  background-color: rgba(250, 245, 228, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 }
 section#section_copperion_test .circle p {
   margin-top: -10px;
@@ -439,7 +445,7 @@ section#section_copperion_test .imgWrap {
   left: 0;
   border-radius: 10px;
   height: 180px;
-  box-shadow: 5px 5px 0px rgba(250, 245, 228, 0.5);
+  border: solid 5px rgba(250, 245, 228, 0.8);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -527,6 +533,7 @@ section#product .title {
   padding: 5px 0px;
 }
 section#product .textbox {
+  border-radius: 10px;
   padding: 15px 0px;
   margin-top: 15px;
   border: solid 2px #faf5e4;
@@ -572,7 +579,7 @@ section#section-contact {
   background-attachment: fixed;
   height: 800px;
   padding: 100px 0px;
-  padding-top: 0px;
+  padding-top: 80px;
   color: white;
   overflow: hidden;
 }
@@ -588,7 +595,7 @@ section#section-contact hr {
   border-top: solid 2px #faf5e4;
 }
 section#section-contact .mailbox {
-  margin-top: 150px;
+  margin-top: 80px;
   height: 400px;
   display: flex;
   justify-content: center;
