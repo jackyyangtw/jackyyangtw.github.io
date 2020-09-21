@@ -1,6 +1,5 @@
 //loading時跑出vue渲染的東西如何解決
 //background-images 手機無法顯示
-//123345123sdfsdf
 
 console.clear()
 var outer_data_bug=[ 

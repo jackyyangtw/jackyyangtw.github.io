@@ -284,10 +284,28 @@ section#section-example {
   background-color: #004445;
   text-align: center;
   color: #faf5e4;
+  padding-bottom: 50px;
+}
+section#section-example .top {
+  margin-bottom: -100px;
+}
+section#section-example .box {
+  margin-top: 120px;
+}
+section#section-example .content {
+  background-color: #c58f00;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+  right: 30px;
+  top: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 section#section-example p {
   text-align: left;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  opacity: 0.8;
 }
 section#section-example hr {
   border-top: solid 1px #faf5e4;
@@ -295,13 +313,23 @@ section#section-example hr {
 section#section-example h3 {
   text-align: left;
 }
-section#section-example img {
+section#section-example h5 {
+  text-align: left;
+}
+section#section-example .img img {
+  width: 90vw;
+  position: relative;
+  left: 20px;
   border-radius: 50%;
-  height: 200px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  section#section-example .content {
+    top: 10px;
+  }
+}
 section#section-copperion {
   text-align: center;
   background-color: #f8b400;
@@ -377,21 +405,55 @@ section#section_copperion_test {
   text-align: center;
   background-color: #f8b400;
 }
+section#section_copperion_test .content {
+  margin-top: 30px;
+}
+section#section_copperion_test .circle p {
+  margin-top: -10px;
+  font-size: 40px;
+}
+section#section_copperion_test .ion {
+  box-shadow: none;
+  border: none;
+}
+section#section_copperion_test p {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+section#section_copperion_test h5 {
+  color: #faf5e4;
+}
 section#section_copperion_test h3 {
+  text-align: center;
+}
+section#section_copperion_test h4 {
   text-align: left;
+  margin-top: 20px;
 }
 section#section_copperion_test hr {
   border-top: solid 1px;
 }
-section#section_copperion_test img {
+section#section_copperion_test .imgWrap {
+  position: relative;
+  left: 0;
   border-radius: 10px;
   height: 180px;
+  box-shadow: 5px 5px 0px rgba(250, 245, 228, 0.5);
+  overflow: hidden;
+  box-sizing: border-box;
 }
-section#section_copperion_test p {
-  margin-top: 20px;
-  letter-spacing: 2px;
+section#section_copperion_test .imgWrap img {
+  position: absolute;
+  left: 0;
+  width: 120%;
 }
 
+@media screen and (min-width: 768px) {
+  section#section_copperion_test img {
+    height: 180px;
+  }
+}
 section#section-earth {
   text-align: center;
   background-color: #faf5e4;
