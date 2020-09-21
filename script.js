@@ -99,7 +99,7 @@ $(window).scroll(
   }
 );
 
-// var s = skrollr.init();
+var s = skrollr.init();
 // var isMobile = s.isMobile()
 // if(isMobile){
 //   s.destroy()
