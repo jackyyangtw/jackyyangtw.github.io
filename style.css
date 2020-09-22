@@ -272,7 +272,7 @@ section#section-danger i {
   color: #faf5e4;
 }
 section#section-danger .image {
-  background-image: url("https://media.istockphoto.com/vectors/vector-artistic-drawing-illustration-of-smoking-smokestacks-concept-vector-id1020617500");
+  background-image: url("https://pool.hesperian.org/w/images/thumb/a/a3/EHB_Ch20_Page_454-1a.png/450px-EHB_Ch20_Page_454-1a.png");
   background-size: cover;
   mix-blend-mode: multiply;
   height: 300px;
@@ -780,7 +780,7 @@ section#section-contact .mailbox button:hover {
   left: 0;
   top: 0;
   background-color: #faf5e4;
-  transition: 0.5s 0.1s;
+  transition: 0.5s 0.05s;
 }
 .loadingPage i {
   animation: earthmove 0.8s infinite alternate;
@@ -790,7 +790,7 @@ section#section-contact .mailbox button:hover {
   z-index: 0;
 }
 .loadingPage.complete .loadingEarth {
-  transform: scale(0.2) rotate(365deg);
+  transform: scale(2);
 }
 .loadingPage .loadingEarth {
   color: #2c786c;
