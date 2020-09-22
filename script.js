@@ -1,5 +1,6 @@
-//loading時跑出vue渲染的東西如何解決
 //background-images 手機無法顯示
+//環境污染配色
+//coppertest的圖片大小
 
 console.clear()
 var outer_data_bug=[ 
@@ -100,10 +101,10 @@ $(window).scroll(
 );
 
 var s = skrollr.init();
-var isMobile = s.isMobile()
-if(isMobile){
-  s.destroy()
-}
+// var isMobile = s.isMobile()
+// if(isMobile){
+//   s.destroy()
+// }
 
 
 $(document).on('click','a',function(evt){

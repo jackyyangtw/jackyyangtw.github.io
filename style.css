@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px;
 }
 
+.navbox {
+  position: static;
+}
+
 nav.navbar {
   transition: 0.5s;
 }
@@ -107,7 +111,6 @@ header.jumbotron::before {
   background-image: url("https://www.beichen.com.tw/templates/cache/31777/images/57ee1bcd74c8e.png");
   background-size: cover;
   background-position: 0 0;
-  background-attachment: fixed;
 }
 @keyframes explore_move {
   0% {
@@ -284,7 +287,10 @@ section#section-example {
   background-color: #004445;
   text-align: center;
   color: #faf5e4;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
+}
+section#section-example h5 {
+  text-align: left;
 }
 section#section-example .top {
   margin-bottom: -100px;
@@ -310,9 +316,6 @@ section#section-example hr {
   border-top: solid 1px #faf5e4;
 }
 section#section-example h3 {
-  text-align: left;
-}
-section#section-example h5 {
   text-align: left;
 }
 section#section-example .img img {
@@ -576,7 +579,6 @@ section#section-contact {
   background-color: #004445;
   background-size: cover;
   background-position: 0 0;
-  background-attachment: fixed;
   height: 800px;
   padding: 100px 0px;
   padding-top: 80px;
@@ -680,6 +682,11 @@ section#section-contact .mailbox button:hover {
   padding: 10px;
   box-sizing: border-box;
   overflow-y: scroll;
+  display: none;
+}
+.buylist.isCartOpen {
+  display: flex;
+  filter: none;
 }
 .buylist::-webkit-scrollbar {
   background-color: #333;
@@ -773,7 +780,7 @@ section#section-contact .mailbox button:hover {
   left: 0;
   top: 0;
   background-color: #faf5e4;
-  transition: 0.5s 0.5s;
+  transition: 0.5s 0.1s;
 }
 .loadingPage i {
   animation: earthmove 0.8s infinite alternate;
