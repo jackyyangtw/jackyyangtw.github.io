@@ -108,7 +108,7 @@ header.jumbotron::before {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("https://www.beichen.com.tw/templates/cache/31777/images/57ee1bcd74c8e.png");
+  background-image: url("images/header.png");
   background-size: cover;
   background-position: 0 0;
 }
@@ -272,7 +272,7 @@ section#section-danger i {
   color: #faf5e4;
 }
 section#section-danger .image {
-  background-image: url("https://pool.hesperian.org/w/images/thumb/a/a3/EHB_Ch20_Page_454-1a.png/450px-EHB_Ch20_Page_454-1a.png");
+  background-image: url("images/danger.png");
   background-size: cover;
   mix-blend-mode: multiply;
   height: 300px;
