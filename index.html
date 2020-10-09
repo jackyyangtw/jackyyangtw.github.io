@@ -2,9 +2,9 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>綠日子LohasDay</title>
+  <title>綠藝盎然Greenery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="LohasDay綠日子">
+<meta property="og:title" content="綠藝盎然Greenery">
 <meta property="og:description" content="提倡環保的綠色品牌" >
 <meta property="og:image" content="header.jumbotron" /><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'>
@@ -19,7 +19,7 @@
 </head>
 <div id="app">
   <div class="navbox">
-    <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand brand" href="header">LohasDay</a>
+    <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand" href="header"><img class="logo" src="images/Greenery2.svg"></a>
       <div class="buycart" @click="isCartOpen=!isCartOpen"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div>
       <button class="navbar-toggler bread" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,10 +34,10 @@
   </div>
   <header class="jumbotron" :class="{isCartOpen: isCartOpen}">
     <div class="container">
-      <h1>綠日子 LohasDay</h1>
+      <h1>綠藝盎然 Greenery</h1>
       <hr/>
-      <p>環保，綠的代名詞。跟我們一起愛護地球，度過綠日子!</p>
-      <div class="explore">探索綠日子</div>
+      <p>環保，綠的代名詞。跟我們一起愛護地球，讓生活綠藝盎然!</p>
+      <div class="explore">探索綠藝盎然</div>
     </div>
   </header>
   <div id="skrollr-body">
@@ -297,7 +297,8 @@
     </div>
   </footer>
 </div>
-<div class="loadingPage"><i class="fas fa-globe-asia loadingEarth"></i>
+<div class="loadingPage">
+  <div class="wrap"><img src="images/logopng.png" alt=""></div>
   <div class="loading">
     <div class="bar"></div>
   </div>

@@ -90,12 +90,14 @@ $(window).scroll(
       $(".navbar").addClass("bg-light");
       $(".brand").css("color","black");
       $(".buycart").css("display","flex");
+      $(".logo").css("display","flex")
     }else{
       $(".navbar").addClass("navbar-top");
       $(".navbar").removeClass("navbar-light");
       $(".navbar").removeClass("bg-light");
       $(".brand").css("color","transparent");
       $(".buycart").css("display","none");
+      $(".logo").css("display","none")
     }
   }
 );

@@ -1,6 +1,7 @@
 * {
   font-family: "Noto Serif TC";
   position: relative;
+  /* border: solid 1px */
 }
 
 body {
@@ -15,11 +16,25 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   padding: 30px;
 }
-
+.nav-item {
+  margin-left: 20px
+}
+.nav-link {
+  font-size: 18px;
+  margin-right: 5px
+}
 .navbox {
   position: static;
 }
-
+.navbox img{
+  width: 180px;
+  height: 100px;
+  padding: 0;
+  display: none;
+}
+li .nav-item{
+  margin-right: 20px
+}
 nav.navbar {
   transition: 0.5s;
 }
@@ -782,8 +797,17 @@ section#section-contact .mailbox button:hover {
   background-color: #faf5e4;
   transition: 0.5s 0.05s;
 }
-.loadingPage i {
+.loadingPage.wrap{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.loadingPage img {
   animation: earthmove 0.8s infinite alternate;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 .loadingPage.complete {
   opacity: 0;
