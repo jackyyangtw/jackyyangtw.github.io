@@ -797,12 +797,6 @@ section#section-contact .mailbox button:hover {
   background-color: #faf5e4;
   transition: 0.5s 0.05s;
 }
-.loadingPage.wrap{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-}
 .loadingPage img {
   animation: earthmove 0.8s infinite alternate;
   width: 150px;
