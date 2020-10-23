@@ -539,10 +539,6 @@ section#product {
   background: #2c786c;
   color: #faf5e4;
 }
-section#product h4.antibacterial {
-  margin-top: -10px;
-  opacity: 0.6;
-}
 section#product .product_box {
   margin-top: 30px;
   display: flex;
@@ -559,7 +555,7 @@ section#product .photo img {
   border-radius: 10px;
 }
 section#product .subTitle {
-  opacity: 0.3;
+  opacity: 0.6;
   margin-top: -10px;
 }
 section#product .titleProduct {
