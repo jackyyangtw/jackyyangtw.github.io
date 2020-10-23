@@ -16,6 +16,13 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   padding: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  section#bugproblem .ant {
+    left: 20%;
+    top: 30%;
+  }
+}
 .nav-item {
   margin-left: 20px
 }
@@ -164,7 +171,13 @@ section#bugproblem{
 section#bugproblem h3 {
   margin-bottom: 50px;
 }
+section#bugproblem h4 {
+  margin-bottom: 50px;
+}
 
+section#bugproblem .ant {
+  left: 30%;
+}
 section#bugproblem .ant {
   left: 30%;
 }
