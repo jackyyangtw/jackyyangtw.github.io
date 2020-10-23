@@ -41,6 +41,61 @@
     </div>
   </header>
   <div id="skrollr-body">
+    <section id="bugproblem":class="{isCartOpen: isCartOpen}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div data-bottom-center="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0);opacity: 1">
+              <img src="https://www.nancycake.com.tw/upload/proclass_122.png" alt="">
+              <h3 class="text-center">您是否也有下困擾，又不知道怎麼解決呢?</h3>
+            </div>
+            <img class="ant" data-bottom-center="opacity:0" data-center="opacity:1" src="https://static.wikia.nocookie.net/cookie/images/6/6a/Mushi_ari.png/revision/latest/scale-to-width-down/340?cb=20190129141244&path-prefix=zh" alt="">
+            <h5 class="text-right" data-bottom-center="transform: translateX(100px);opacity: 0" data-center="transform: translateX(-100px);opacity: 1">家裡怎麼有這麼多果蠅?</h5>
+            <h5 data-bottom-center="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(100px);opacity: 1">螞蟻怎麼又出現了!</h5>
+            <h5 class="text-right" data-bottom-center="transform: translateX(100px);opacity: 0" data-center="transform: translateX(-100px);opacity: 1">怎麼又有蒼蠅!?</h5>
+            <h5 data-bottom-center="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(100px);opacity: 1">媽呀!有蟑螂!</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-earth" :class="{isCartOpen: isCartOpen}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-12"><i class="fa fa-globe-asia" data-bottom-top="transform: translateY(-80px) rotate(0deg);opacity: 0" data-center="transform: translateY(-10px) rotate(360deg);opacity: 1" data-top="transform: translateY(-50px) rotate(0deg);opacity: 1"></i>
+            <h4 class="text-wrap" data-bottom-top="transform: translateY(-30px) scale(1);opacity: 0" data-center="transform: translateY(-30px) scale(1.1);opacity: 1">您的聲音，我們聽到了。</h4>
+            <h5 data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(0px);opacity: 1" data-top="transform: translateY(-30px);opacity: 1">我們推出了一些商品，在生活的同時也響應環保!</h5>
+          </div>
+        </div>
+      </div>
+      <div class="mon mon1 fa fa-mountain"></div>
+      <div class="mon mon2 fa fa-mountain"></div>
+      <div class="mon mon3 fa fa-mountain"></div>
+      <div class="mon mon4 fa fa-mountain"></div>
+    </section>
+    <section id="product" :class="{isCartOpen: isCartOpen}">
+      <div class="container">
+        <h3 class="text-center">防蟲專區</h3>
+        <h4 class="text-center subTitle">BugPrevent</h4>
+        <div class="row product_box" v-for="bug in bug_control" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">
+          <div class="col-md-6 photo col-sm-12"><img class="img-fluid" :src="bug.img" alt=""/></div>
+          <div class="col-md-6 col-sm-12 textbox">
+            <div class="col-md-12 name">
+              <h4>{{bug.name}}</h4>
+              <h5 class="add" @click="addCart(bug)">+加入購物車</h5>
+            </div>
+            <div class="col-md-12">
+              <hr/>
+              <p class="text text-justify">{{bug.text}}</p>
+              <p class="text">材質: {{bug.meterial}}</p>
+              <hr/>
+            </div>
+            <div class="col-md-12 price">
+              <h5>NT$ {{bug.price}}</h5>
+            </div>
+          </div>
+        </div><br/>
+      </div>
+    </section>
     <section id="section-nature" :class="{isCartOpen: isCartOpen}">
       <div class="fas fa-sun sun" data-bottom-center="opacity:0" data-center="opacity: 1"></div>
       <div class="cloudbox" data-bottom-center="opacity:0" data-center="opacity: 1">
@@ -192,28 +247,8 @@
     </section>
     <section id="product" :class="{isCartOpen: isCartOpen}">
       <div class="container">
-        <h3 class="title">防蟲專區</h3>
-        <hr class="top"/>
-        <div class="row product_box" v-for="bug in bug_control" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">
-          <div class="col-md-6 photo col-sm-12"><img class="img-fluid" :src="bug.img" alt=""/></div>
-          <div class="col-md-6 col-sm-12 textbox">
-            <div class="col-md-12 name">
-              <h4>{{bug.name}}</h4>
-              <h5 class="add" @click="addCart(bug)">+加入購物車</h5>
-            </div>
-            <div class="col-md-12">
-              <hr/>
-              <p class="text text-justify">{{bug.text}}</p>
-              <p class="text">材質: {{bug.meterial}}</p>
-              <hr/>
-            </div>
-            <div class="col-md-12 price">
-              <h5>NT$ {{bug.price}}</h5>
-            </div>
-          </div>
-        </div><br/>
-        <h3 class="title">抗菌專區</h3>
-        <hr class="top"/>
+        <h3 class="title text-center">抗菌專區</h3>
+        <h4 class="title text-center antibacterial">Antibacterial</h4>
         <div class="row product_box" v-for="ion in ion_product" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">
           <div class="col-md-6 photo col-sm-12"><img class="img-fluid" :src="ion.img" alt=""/></div>
           <div class="col-md-6 col-sm-12 textbox">
@@ -297,12 +332,12 @@
     </div>
   </footer>
 </div>
-<div class="loadingPage">
+<!-- <div class="loadingPage">
   <div class="wrap"><img src="images/logopng.png" alt=""></div>
   <div class="loading">
     <div class="bar"></div>
   </div>
-</div>
+</div> -->
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>

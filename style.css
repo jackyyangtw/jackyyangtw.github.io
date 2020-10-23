@@ -156,7 +156,25 @@ header.jumbotron .container .explore::after {
   transform: scaleX(1.5) scaleY(0.5);
   animation: explore_move 2s infinite;
 }
+section#bugproblem{
+  background-color: #faf5e4;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+section#bugproblem h3 {
+  margin-bottom: 50px;
+}
 
+section#bugproblem .ant {
+  left: 30%;
+}
+section#bugproblem img {
+  width: 200px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  transform: translate(50%,50%)
+}
 section#section-nature {
   background-size: cover;
   background-color: #faf5e4;
@@ -521,9 +539,9 @@ section#product {
   background: #2c786c;
   color: #faf5e4;
 }
-section#product hr.top {
-  border-top: solid 5px #e8af13;
-  border-radius: 3px;
+section#product h4.antibacterial {
+  margin-top: -10px;
+  opacity: 0.6;
 }
 section#product .product_box {
   margin-top: 30px;
@@ -540,15 +558,18 @@ section#product .photo img {
   width: 70%;
   border-radius: 10px;
 }
-section#product .title {
+section#product .subTitle {
+  opacity: 0.3;
+  margin-top: -10px;
+}
+section#product .titleProduct {
+  margin-left: auto;
+  margin-right: auto;
   background-color: #e8af13;
-  padding: 0;
-  text-align: center;
   width: 150px;
   margin-top: 50px;
-  position: relative;
   border-radius: 10px;
-  padding: 5px 0px;
+  padding: 10px 0px;
 }
 section#product .textbox {
   border-radius: 10px;
