@@ -1,29 +1,41 @@
-//background-images 手機無法顯示
-//環境污染配色
-//coppertest的圖片大小
+//介紹生物可分解塑膠PE、PP
 
 console.clear()
 var outer_data_bug=[ 
     {
-      price: 190,
-      meterial: "棉麻、塑膠",
+      price: 299,
+      meterial: "PE(聚乙烯)",
       name: "蟲不來防蟲餐墊",
-      img: "images/placemat.jpg",
-      text: "天然材質，防蟲效果極佳，經實測水果放在餐墊上一整天，完全沒有蚊蟲爬過的痕跡，而且效果能持續三年，真的很實用!",
+      img: "images/bugpreventPlacemat.jpg",
+      text: "奈米級驅蟲設計，防蟲效果極佳，經實測水果放在餐墊上一整天，完全沒有蚊蟲爬過的痕跡，而且效果能持續三年，真的很實用!",
       add: "+加入購物車",
     },
     {
       price: 120,
       meterial: "塑膠",
       name: "防蟲母片",
-      img: "images/card.jpg",
+      img: "images/bugpreventcard.jpg",
       text: "天然材質，防蟲效果極佳，掛在衣櫥、客廳、廚房等蚊蟲經常出現的地方，蚊蟲就漸漸消失了!真的很實用!",
       add: "+加入購物車",
     },{
-      price: 250,
-      meterial: "塑膠",
+      price: 699,
+      meterial: "PP (聚丙烯)",
       name: "蟲不來防蟲桶",
-      img: "images/trash.jpg",
+      img: "images/burpreventTrashcan2.jpg",
+      text: "經奈米處理方式，將塑料製程提升其功能，防蟲效果極佳，經實測，放在廚房一個月後，完全看不到蟑螂、螞蟻等蚊蟲了!",
+      add: "+加入購物車",
+    },{
+      price: 79,
+      meterial: "塑膠",
+      name: "防蟲金元寶",
+      img: "images/bugprevent1.jpg",
+      text: "天然材質，防蟲效果極佳，經實測，放在廚房一個月後，完全看不到蟑螂、螞蟻等蚊蟲了!",
+      add: "+加入購物車",
+    },{
+      price: 399,
+      meterial: "塑膠",
+      name: "防蟲葫蘆",
+      img: "images/bugprevent2.jpg",
       text: "天然材質，防蟲效果極佳，經實測，放在廚房一個月後，完全看不到蟑螂、螞蟻等蚊蟲了!而且效果能持續三年，真的很實用!",
       add: "+加入購物車",
     }
@@ -34,14 +46,14 @@ var outer_data_ion=[
     price: 80,
     meterial: "銅離子、棉",
     name: "銅離子保暖襪",
-    img: "images/sock.jpg",
+    img: "images/copper_sock.jpg",
     text: "在我們日常生活中穿的襪子，加上銅離子後，就能夠抗菌抗除臭，冬天穿的話還比一般的襪子還要保暖唷~",
     add: "+加入購物車",
   },{
-      price: 100,
+      price: 99,
       meterial: "銅離子、塑膠",
       name: "銅離子球",
-      img: "images/ball.jpg",
+      img: "images/copperball.jpg",
       text: "您也有水壺、水杯長青苔、生菌的困擾嗎?一顆銅離子球放入水中，您的煩惱馬上被解決!",
       add: "+加入購物車",
   }

@@ -20,7 +20,7 @@
 <div id="app">
   <div class="navbox">
     <nav class="navbar navbar-expand-lg fixed-top at_top"><a class="navbar-brand" href="header"><img class="logo" src="images/Greenery2.svg"></a>
-      <div class="buycart" @click="isCartOpen=!isCartOpen"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div>
+      <!-- <div class="buycart" @click="isCartOpen=!isCartOpen"><i class="fas fa-shopping-cart"></i><span>{{cart.length}}</span></div> -->
       <button class="navbar-toggler bread" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -82,7 +82,7 @@
           <div class="col-md-6 col-sm-12 textbox">
             <div class="col-md-12 name">
               <h4>{{bug.name}}</h4>
-              <h5 class="add" @click="addCart(bug)">+加入購物車</h5>
+              <!-- <h5 class="add" @click="addCart(bug)">+加入購物車</h5> -->
             </div>
             <div class="col-md-12">
               <hr/>
@@ -209,24 +209,24 @@
             </div>
           </div>
           <div class="col-md-4 content">
-            <div class="imgWrap" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"><img src="images/coppertest.jpg" alt=""/></div>
+            <div class="imgWrap" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"><img src="images/copperion_test.jpg" alt=""/></div>
             <div class="text" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">
               <h4>培養皿測試</h4>
               <p class="text-justify">在培養皿中放入銅離子母片和沒有放入銅離子母片做比較，很明顯的有銅離子的話，培養皿裡面幾乎沒有受到細菌汙染!</p>
             </div>
           </div>
           <div class="col-md-4 content">
-            <div class="imgWrap" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"><img class="img-fluid" src="images/copperProudct.jpg" alt=""/></div>
+            <div class="imgWrap" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"><img class="img-fluid" src="images/no_copperion.jpg" alt=""/></div>
             <div class="text" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">
-              <h4>加入銅離子</h4>
-              <p class="text-justify">左邊的手環未加入銅離子，右邊的有加入，未加入銅離子的商品容易氧化!久了將不再美觀。銅離子真的是種很神奇，而且很實用的元素呢!</p>
+              <h4>未加入銅離子</h4>
+              <p class="text-justify">未加入銅離子的商品放在水中，時間久了就會褪色，被細菌汙染，變得醜醜的!</p>
             </div>
           </div>
           <div class="col-md-4 content">
-            <div class="imgWrap" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"><img class="img-fluid" src="images/copperProduct2.jpg" alt=""/></div>
+            <div class="imgWrap" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1"><img class="img-fluid" src="images/copperion.jpg" alt=""/></div>
             <div class="text" data-bottom-top="transform: translateY(-30px);opacity: 0" data-center="transform:translateY(10px);opacity: 1">
               <h4>加入銅離子後</h4>
-              <p class="text-justify"> 加入銅離子的商品，不但沒受到細菌汙染，而且還不會退色!銅的顏色也不失藝術感。</p>
+              <p class="text-justify"> 加入銅離子的商品，不但沒受到細菌汙染，而且還不會退色，保持商品的功能與外觀!</p>
             </div>
           </div>
         </div>
@@ -255,7 +255,7 @@
           <div class="col-md-6 col-sm-12 textbox">
             <div class="col-md-12 name">
               <h4>{{ion.name}}</h4>
-              <h5 class="add" @click="addCart(ion)">+加入購物車</h5>
+              <!-- <h5 class="add" @click="addCart(ion)">+加入購物車</h5> -->
             </div>
             <div class="col-md-12">
               <hr/>
