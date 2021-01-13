@@ -124,6 +124,11 @@ section {
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,15 +138,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
 }
 
 .header:before {
   content: '';
+  background-color: black;
+  opacity: 0.6;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -149,8 +151,6 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: black;
-  opacity: 0.6;
 }
 
 .header .title {
@@ -543,6 +543,17 @@ section#works .main {
 }
 
 .hover_words {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  line-height: 1.8;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -559,17 +570,6 @@ section#works .main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  line-height: 1.8;
-  background-color: black;
-  color: white;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .hover_words h3 {
@@ -588,6 +588,13 @@ section#works .main {
 }
 
 .block {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  line-height: 1.8;
+  padding: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -597,13 +604,6 @@ section#works .main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
-  line-height: 1.8;
-  padding: 0.5em;
 }
 
 .block img {
