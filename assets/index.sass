@@ -1,0 +1,380 @@
+//同在asset資料夾，所以不用加上assets路徑
+@import '_reset'
+
+$color_op_black: rgba(0, 0, 0, 0.3)
+$color_content: #532B1D
+$color_btn: #eee
+$bg_light: #EFE9E7
+$color_main: #34aeeb
+
+$base_font: 14px
+$section_padding: 2em
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+@mixin ab_center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+@mixin fcenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin ipad
+	@media(max-width: 768px)
+		@content
+
+*
+  // border: 1px solid #000
+  font-family: 微軟正黑體
+
+a
+  text-decoration: none
+h1
+  font-size: $base_font*4
+h2
+  font-size: $base_font*2
+h3
+  font-size: $base_font*1.5
+p
+  font-size: $base_font
+section
+  padding: $section_padding
+.underLine
+  height: 4px
+  border: none
+  background-color: $color_main
+  width: 50px 
+  margin: 1em auto 0 auto
+.wrap
+  max-width: 960px
+  margin: 0 auto
+
+.header
+  background-image: url('header_desktop.jpeg')
+  background-position: top center
+  background-size: cover
+  background-attachment: fixed
+  +fcenter
+  flex-direction: column
+  position: relative
+  &:before
+    content: ''
+    +size(100%,100%)
+    +ab_center
+    background-color: black
+    opacity: 0.6
+  .title
+    padding: 2em
+    color: white
+    text-align: center
+    margin: 10%
+    z-index: 10
+    h1
+      margin-bottom: 0.5em
+    .content
+      text-align: center
+      line-height: 1.6
+      margin-top: 1em
+      p
+        margin-top: 0.25em
+
+@include ipad
+  .header
+    background-image: url('header_mobile.jpeg')
+    background-position: top center
+    .title
+      margin: 20% auto
+.navbar
+  z-index: 11
+  background: $color_op_black
+  height: 50px
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .menu-text
+    display: none
+  a
+    //這樣才整個block都能點
+    display: block
+    color: white
+    transition: 0.3s
+    &:hover
+      color: $color_main
+  .logo
+    margin: 0.5em 1em
+    font-size: 25px
+    float: left
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      p
+        font-size: 20px
+      img
+        width: 30px
+        margin-right: 0.5em
+  .menu
+    float: right
+    margin: 0.25em 1em
+    li
+      float: left
+      margin: 0.5em
+      i
+        margin-right: 0.3em
+
+@include ipad
+  .navbar
+    background-color: $color_main
+    position: fixed
+    top: 0
+    width: 100%
+    display: block
+    a 
+      &:hover
+        color: darken($color_btn,10)
+      &:active
+        color: darken($color_btn,10)
+    .menu-text
+      display: block
+      float: right
+      padding: 1em
+    .menu
+      transition: 0.5s
+      max-height: 0px
+      overflow: hidden
+      z-index: 100
+      position: absolute
+      left: 0
+      right: 0
+      margin: 50px 0 0 0
+      +fcenter
+      li
+        float: none
+        width: 100%
+        background-color: rgba($color_btn,0.9)
+        padding: 1em
+        margin: 0
+        text-align: center
+        &:active
+          background-color: darken($color_btn,10)
+        a
+          color: darken($color_main,10)
+
+
+.showMenu
+  .header
+    .navbar
+      .menu
+        max-height: 50px
+
+section#about
+  padding: 3em
+  background-color: $bg_light
+  color: $color_content
+  .title
+    margin-bottom: 1.5em
+    h2
+      text-align: center
+.about_block_area
+  display: flex
+  justify-content: center
+  align-items: center
+  .about_block
+    text-align: center
+    width: 50%
+    display: inline-block
+    line-height: 1.8
+    h2
+      margin: 0.5em 0
+    img
+      max-width: 30%
+      border-radius: 50%
+    p
+      text-align: left
+      border: 2px solid $color_content
+      padding: 1em
+@include ipad
+  .about_block_area
+    display: block
+    .about_block
+      width: 100%
+      margin-bottom: 1em
+      img
+        max-width: 50%
+section#skills
+  h2
+    text-align: center
+  .content
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .text
+      max-width: 50%
+      line-height: 2
+      text-align: center
+      padding: 1em
+      i
+        font-size: 60px
+        margin-bottom: 0.25em
+      h3
+        margin-bottom: 1em
+      p
+        text-align: left
+  @include ipad
+    .content
+      flex-direction: column
+      .text
+        max-width: 100%
+ul.bars
+  width: 50%
+  margin-top: 2em
+  li
+    span
+      display: flex
+      align-items: center
+      
+    .progress
+      width: 100%
+      background-color: grey
+      height: 20px
+      overflow: hidden
+      background-color: rgba(#fafafa, .45)
+      border-radius: 3px
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
+      position: relative
+      line-height: 1.8
+      margin: 0.5em 0
+      .progress-bar
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        width: 0
+        font-size: 12px
+        line-height: 1.8
+        color: #fff
+        text-align: center
+        background-color: $color_main
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)
+        transition: width 3s ease
+    img
+      margin-right: 0.5em
+      width: 30px
+  @include ipad
+    width: 100%
+
+section#works
+  background-image: url("collection.jpg")
+  background-position: center center
+  background-size: cover
+  background-attachment: fixed
+  .title
+    text-align: center
+    margin-bottom: 1em
+    filter: none
+    h2
+      color: white
+      margin-bottom: 0.5em
+  .main
+    +fcenter
+.cards
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  .card
+    margin: 1%
+    width: 46%
+    position: relative
+    @include ipad
+      width: 98%
+.card
+  &:hover
+    .hover_words
+      opacity: 0.8
+.hover_words
+  +size(100%,100%)
+  +ab_center
+  +fcenter
+  flex-direction: column
+  text-align: center
+  line-height: 1.8
+  background-color: black
+  color: white
+  opacity: 0
+  transition: 0.5s
+  h3
+    margin-bottom: 0.5em
+  
+#contact_area
+  background-color: $bg_light
+  color: $color_content
+  height: auto
+  h2
+    text-align: center
+    padding: 1em 1em 0 1em
+.block
+  +fcenter
+  flex-direction: column
+  margin: auto
+  line-height: 1.8
+  padding: 0.5em
+  img
+    border-radius: 50%
+    +size(150px,150px)
+    margin-right: 2em
+  .content
+    +fcenter
+    a
+      color: $color_content
+      transition: 0.3s
+      font-size: 20px
+      i
+        margin-right: 1em
+      &:hover
+        color: $color_main
+  @include ipad
+    img
+      margin-right: 1em
+    .content
+      a
+        font-size: 6px
+
+ul.icons
+  margin-top: 1em
+  font-size: 30px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  li
+    padding: 1em
+    a
+      color: $color_content
+      transition: 0.3s
+      &:hover
+        color: $color_main
+  @include ipad
+    margin-top: 0
+    .block
+      margin-top: 0
+      float: none
+      width: 98%
+footer
+  +fcenter
+  p
+    padding: 3em
+.animated_fadeIn
+  opacity: 0
+  transform: translateY(50px)
+  transition: 1s 
+.fadeIn
+  opacity: 1
+  transform: translateY(0px)
