@@ -345,7 +345,7 @@ section#about .title h2 {
 
 .about_block_area .about_block {
   text-align: center;
-  width: 50%;
+  width: 60%;
   display: inline-block;
   line-height: 1.8;
 }
@@ -361,9 +361,7 @@ section#about .title h2 {
 
 .about_block_area .about_block p {
   text-align: left;
-  border: 2px solid #532B1D;
   padding: 1em;
-  letter-spacing: 4px;
 }
 
 @media (max-width: 768px) {
@@ -402,6 +400,7 @@ section#skills .content .text {
 }
 
 section#skills .content .text i {
+  color: #34aeeb;
   font-size: 60px;
   margin-bottom: 0.25em;
 }
@@ -646,7 +645,7 @@ section#works .main {
     margin-right: 1em;
   }
   .block .content a {
-    font-size: 12px;
+    font-size: 6px;
   }
 }
 
@@ -701,7 +700,7 @@ footer {
 }
 
 footer p {
-  padding: 5em;
+  padding: 3em;
 }
 
 .animated_fadeIn {
