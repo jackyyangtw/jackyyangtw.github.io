@@ -481,6 +481,90 @@ ul.bars li img {
   }
 }
 
+section#skill_detial ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section#skill_detial ul li.skill {
+  margin: 1%;
+  width: 31.333%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(128, 128, 128, 0.1);
+          box-shadow: 0 0 10px rgba(128, 128, 128, 0.1);
+  border-radius: 5px;
+  padding: 0 2em 1em 2em;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#skill_detial ul li.skill ol {
+  font-size: 10px;
+  line-height: 2;
+}
+
+section#skill_detial ul li.skill .img {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#skill_detial ul li.skill .img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  section#skill_detial ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+  }
+  section#skill_detial ul li.skill {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  section#skill_detial ul li.skill {
+    margin: 3% 0;
+    width: 100%;
+  }
+}
+
 section#works {
   background-image: url("collection.jpg");
   background-position: center center;
