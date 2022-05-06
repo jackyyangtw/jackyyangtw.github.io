@@ -20,28 +20,51 @@
 
   <link rel="stylesheet" href="assets/index.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script defer src="all.js"></script>
 </head>
 <body>
-  <div class="wrap">
+  <section class="top-sec">
     <div class="header">
       <div class="navbar">
-        <div class="logo">
-          <a href="">
-            <img src="assets/logo.png" alt="">
-            <p>Jacky's Home</p>
-          </a>
+        <div class="navbar__content">
+          <div class="logo">
+            <a class="scroll_top" href="">
+              <img src="assets/logo.png" alt="">
+              <p>Jacky's Home</p>
+            </a>
+          </div>
+          <ul class="menu">
+            <li><a class='scroll-to-anchor' href="#about"><i class="fas fa-address-card"></i>關於</a></li>
+            <li><a class='scroll-to-anchor' href="#skills"><i class="fab fa-chrome"></i>技能</a></li>
+            <li><a class='scroll-to-anchor' href="#works"><i class="fas fa-images"></i>作品</a></li>
+            <li><a class='scroll-to-anchor' href="#contact_area"><i class="fas fa-comments"></i>聯絡</a></li>
+          </ul>
         </div>
-        <ul class="menu">
-          <li><a class='scroll_top' href="#about"><i class="fas fa-address-card"></i>關於</a></li>
-          <li><a class='scroll_top' href="#skills"><i class="fab fa-chrome"></i>技能</a></li>
-          <li><a class='scroll_top' href="#works"><i class="fas fa-images"></i>作品</a></li>
-          <li><a class='scroll_top' href="#contact_area"><i class="fas fa-comments"></i>聯絡</a></li>
-        </ul>
-        <a href="" class="menu-text"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="navbar__mobile-container">
+        <div class="navbar__mobile">
+          <a class="scroll_top navbar__mobile-logo" href="">
+            <figure style="padding-right: 1rem;">
+              <img class="navbar__mobilelogo" src="assets/logo.png" alt="">
+            </figure>
+            <p style="color: white;">Jacky's Home</p>
+          </a>
+          <div class="navbar__arrow" style="width: 20px;">
+            <img src="./assets/chevron-down-solid.svg" alt="">
+          </div>
+        </div>
+        <div class="navbar__mobile-content">
+          <ul>
+            <li>關於</li>
+            <li>技能</li>
+            <li>作品</li>
+            <li>聯絡</li>
+          </ul>
+        </div>
       </div>
       <div class="title">
-        <h1>Jacky's</h1>
-        <h1>PROFILE</h1>
+        <h1>Jacky's PROFILE</h1>
         <hr class="underLine">
         <div class="content">
           <h3>人生就是不斷學習、筆記，然後進步。</h3>
@@ -49,7 +72,9 @@
         </div>
       </div>
     </div>
-    <section id="about">
+  </section>
+  <section id="about">
+    <div class="wrap">
       <div class="title animated_fadeIn">
         <h2>關於我</h2>
         <hr class="underLine">
@@ -62,8 +87,10 @@
           </p>
         </div>
       </div>
-    </section>
-    <section id="skills">
+    </div>
+  </section>
+  <section id="skills" class="section-padding">
+    <div class="wrap">
       <div class="title animated_fadeIn">
         <h2>技能</h2>
         <hr class="underLine">
@@ -121,7 +148,10 @@
           </li>
         </ul>
       </div>
-    <section id="skill_detial">
+    </div>
+  </section>
+  <section id="skill_detial" class="section-padding" style="padding-top: 0;">
+    <div class="wrap">
       <ul>
         <li class="skill animated_fadeIn">
           <div class="img">
@@ -136,9 +166,8 @@
         </li>
         <li class="skill animated_fadeIn">
           <div class="img">
-            <img src="assets/bootstrap.png" alt="">
+            <img src="assets/bootstrap-v2.png" alt="">
           </div>
-
           <ol>
             <li>客製主題色系</li>
             <li>善用元件，更快速開發網頁</li>
@@ -147,31 +176,31 @@
         </li>
         <li class="skill animated_fadeIn">
           <div class="img">
-            <img src="assets/vue.png" alt="">
+            <img src="assets/vue-v2.jpg" alt="">
           </div>
-
           <ol>
             <li>使用Vue CLI建立專案，搭建Webpack開發環境</li>
             <li>Vue Router 撰寫網頁路徑</li>
             <li>Vuex管理網頁資料</li>
             <li>Vue-axios串接後端api</li>
-            <li>Vue套件使用(Vue-carousel、Vue - vee-validate)</li>
+            <li>Vue UI庫使用 (Naive UI)</li>
+            <li>會使用Vue3 composition api </li>
           </ol>
         </li>
         <li class="skill animated_fadeIn">
           <div class="img">
-            <img src="assets/jquery.png" alt="">
+            <img src="assets/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="">
           </div>
           <ol>
-            <li>陣列批次操作，處理網頁資料</li>
-            <li>串接後端api</li>
-            <li>jQuery特效製作(fadeIn、fadeOut、animate)</li>
-            <li>使用特效插件製作輪播或滑動效果(slick、AOS等等)</li>
+            <li>使用Array methods、字串處理、展開其餘參數</li>
+            <li>使用async await、promise串接public API</li>
+            <li>使用特效插件製作輪播或滑動效果(Swiper、AOS等等)</li>
+            <li>使用Intersection Observer API 偵測scroll position 來執行特效</li>
           </ol>
         </li>
         <li class="skill animated_fadeIn">
           <div class="img">
-            <img src="assets/git.png" alt="">
+            <img src="assets/git-3.png" alt="">
           </div>
           <ol>
             <li>基本上傳檔案</li>
@@ -180,9 +209,10 @@
           </ol>
         </li>
       </ul>
-    </section>
-    </section>
-    <section id="works">
+    </div>
+  </section>
+  <section id="works" class="section-padding">
+    <div class="wrap">
       <div class="title animated_fadeIn">
         <h2>作品</h2>
         <hr class="underLine">
@@ -235,49 +265,46 @@
           </li>
         </ul>
       </div>
-    </section>
-    <section id="contact_area">
-      <div class="animated_fadeIn">
-        <h2>聯絡方式</h2>
-        <hr class="underLine">
-      </div>
-
-      <div class="block ">
-        <div class="content animated_fadeIn">
-          <img src="assets/me2.jpg" alt="">
-          <ul>
-            <li>
-              <a href="https://line.me/ti/p/eHq_p1HCO9"><i class="fab fa-line"></i>jacky11527</a>
-            </li>
-            <li>
-              <a href="tel:+886-931941514"><i class="fas fa-phone"></i>0931941514</a>
-            </li>
-            <li>
-              <a href="mailto:jaky2204@gmail.com"><i class="far fa-envelope"></i>jaky2204@gmail.com</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="icons">
+    </div>
+  </section>
+  <section id="contact_area">
+    <div class="animated_fadeIn">
+      <h2>聯絡方式</h2>
+      <hr class="underLine">
+    </div>
+    <div class="block ">
+      <div class="content">
+        <img src="assets/me2.jpg" alt="">
+        <ul>
           <li>
-            <a href="https://github.com/jackyyangtw" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://line.me/ti/p/eHq_p1HCO9"><i class="fab fa-line"></i>jacky11527</a>
           </li>
           <li>
-            <a href="https://www.facebook.com/jacky.yung.735" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="tel:+886-931941514"><i class="fas fa-phone"></i>0931941514</a>
           </li>
           <li>
-            <a href="https://www.instagram.com/jackyyang1209/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:jaky2204@gmail.com"><i class="far fa-envelope"></i>jaky2204@gmail.com</a>
           </li>
         </ul>
       </div>
-    </section>
-    <footer>
-      <p>
-        Copyright © 2020 Jacky Yang 
-      </p>
-    </footer>
-  </div>
+      <ul class="icons">
+        <li>
+          <a href="https://github.com/jackyyangtw" target="_blank"><i class="fab fa-github-square"></i></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/jacky.yung.735" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/jackyyang1209/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <p>
+      Copyright © 2020 Jacky Yang 
+    </p>
+  </footer>
 </body>
 </html>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="all.js"></script>

@@ -9,7 +9,7 @@ $bg_light: #EFE9E7
 $color_main: #34aeeb
 
 $base_font: 14px
-$section_padding: 2em
+$section_padding: 6rem 2rem;
 
 @mixin size($w,$h)
   width: $w
@@ -32,6 +32,18 @@ $section_padding: 2em
 @mixin phone
   @media(max-width: 414px)
     @content
+
+@mixin width-768
+  @media(min-width: 768px)
+    @content
+
+@mixin width-992
+  @media(min-width: 992px)
+    @content
+
+@mixin width-1024
+  @media(min-width: 1024px)
+    @content
 *
   // border: 1px solid #000
   font-family: 微軟正黑體
@@ -47,6 +59,11 @@ h3
 p
   font-size: $base_font
 section
+  // padding: $section_padding
+figure
+  margin: 0
+  padding: 0
+.section-padding
   padding: $section_padding
 .underLine
   height: 4px
@@ -57,7 +74,6 @@ section
 .wrap
   max-width: 1200px
   margin: 0 auto
-
 .header
   background-image: url('header_desktop.jpeg')
   background-position: top center
@@ -83,7 +99,7 @@ section
     .content
       text-align: center
       line-height: 1.6
-      margin-top: 1em
+      margin-top: 3em
       p
         margin-top: 0.25em
 
@@ -97,11 +113,63 @@ section
   z-index: 11
   background: $color_op_black
   height: 50px
-  position: relative
+  position: fixed
+  top: 0
   width: 100%
-  display: flex
-  align-items: center
-  justify-content: space-between
+  transition: 0.3s ease-in
+  display: none
+  @include width-768
+    display: block
+  &__arrow
+    width: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.3s
+    @include width-768
+      display: none
+  &__mobilelogo
+    width: 30px
+    height: 30px
+  &__mobile
+    position: fixed
+    top: 0
+    width: 100%
+    padding: 0.5rem 1rem
+    display: flex
+    justify-content: space-between
+    align-content: center
+    flex-wrap: wrap
+    background-color: rgba(black,0.7)
+    &-content
+      position: fixed
+      top: 48px
+      width: 100%
+      background-color: rgba(black,0.7)
+      color: white
+      text-align: center
+      height: 0
+      overflow: hidden
+      transition: all 0.3s
+      li
+        padding: 1rem 0
+    &-container
+      z-index: 1000
+      position: fixed
+      width: 100%
+    &-logo
+      display: flex
+      justify-content: center
+      align-items: center 
+    @include width-768
+      display: none
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1200px
+    position: relative
+    margin: 0 auto
   .menu-text
     display: none
   a
@@ -139,7 +207,6 @@ section
     position: fixed
     top: 0
     width: 100%
-    display: block
     a
       &:hover
         color: darken($color_btn,10)
@@ -158,6 +225,7 @@ section
       left: 0
       right: 0
       margin: 50px 0 0 0
+      display: none
       +fcenter
       li
         float: none
@@ -171,11 +239,6 @@ section
         a
           color: darken($color_main,10)
 
-.showMenu
-  .header
-    .navbar
-      .menu
-        max-height: 50px
 
 section#about
   padding: 3em
@@ -289,8 +352,9 @@ section#skill_detial
       padding: 0 2em 1em 2em
       min-height: 300px
       display: flex
-      justify-content: flex-start
+      justify-content: center
       align-items: center
+      min-height: 320px
       ol
         font-size: 13px
         line-height: 2
@@ -298,6 +362,7 @@ section#skill_detial
         width: 100%
         height: 100px
         object-fit: cover
+        margin-bottom: 1rem
         +fcenter
         img
           object-fit: cover
@@ -332,7 +397,7 @@ section#works
   align-items: center
   .card
     margin: 1%
-    width: 46%
+    width: 30%
     position: relative
     @include ipad
       width: 98%
@@ -358,6 +423,7 @@ section#works
   background-color: $bg_light
   color: $color_content
   height: auto
+  padding: 2.5rem 0
   h2
     text-align: center
     padding: 1em 1em 0 1em
